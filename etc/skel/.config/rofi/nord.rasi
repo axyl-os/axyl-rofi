@@ -1,0 +1,49 @@
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* theme dark colors */
+    nord-bg0:          #2e3440;
+    nord-bg0-soft:     #3b4252;
+    nord-bg3:          #4c566a;
+    nord-fg0:          #eceff4;
+    nord-fg1:          #e5e9f0;
+    nord-color1-dark:     #5e81ac;
+    nord-color1-light:    #81a1c1;
+    nord-color2-dark:  #88c0d0;
+    nord-color2-light: #8fbcbb;
+    nord-gray:         #d8dee9;
+
+    /* Theme colors */
+    background:                  @nord-bg0;
+    background-color:            @background;
+    foreground:                  @nord-fg1;
+    border-color:                @nord-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @nord-bg0-soft;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @nord-bg3;
+    selected-normal-foreground:  @nord-fg0;
+
+    active-background:           @nord-color2-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @nord-color2-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @nord-color1-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @nord-color1-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "theme-common.rasi"
+
