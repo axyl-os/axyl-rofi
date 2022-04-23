@@ -1,10 +1,15 @@
+configuration {
+	display-drun:    "Launch";
+	show-icons:      true;
+}
+
 window {
     background-color: @background;
     border:           2;
-    padding:          5px;
-    font:             "JetBrainsMono Nerd Font Medium 12";
-    width:            600px;
-    border-radius:    10px;
+    padding:          10px 6px;
+    font:             "JetBrainsMono Nerd Font Medium 10";
+    width:            450px;
+    border-radius:    12px;
 }
 
 mainbox {
@@ -24,16 +29,22 @@ textbox {
 }
 
 listview {
-    border:       2px solid 0 0;
+    border:       0px solid 0 0;
     padding:      2px 0 0;
     border-color: @separatorcolor;
-    spacing:      2px;
+    spacing:      3px;
     scrollbar:    @scrollbar;
 }
 
 element {
-    border:  0;
-    padding: 2px;
+    padding: 3px 8px;
+    spacing: 5px;
+    border: 1px solid 0 0;
+    border-color: @separatorcolor;
+}
+
+element-icon {
+    size: 1.3em;
 }
 
 element.normal.normal {
@@ -49,6 +60,11 @@ element.normal.urgent {
 element.normal.active {
     background-color: @active-background;
     text-color:       @active-foreground;
+}
+
+element.selected {
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
 element.selected.normal {
@@ -67,18 +83,18 @@ element.selected.active {
 }
 
 element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
 }
 
 element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
 }
 
 element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+    background-color: @active-background;
+    text-color:       @active-foreground;
 }
 
 scrollbar {
@@ -97,8 +113,15 @@ mode-switcher {
 inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    2px;
+    padding:    4px;
     children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+prompt {
+    background-color: @prompt-background;
+    border-radius: 3px;
+    padding: 0px 5px;
+    font-style: bold;
 }
 
 case-indicator,
@@ -116,10 +139,10 @@ button.selected {
 
 textbox-prompt-sep {
     expand:     false;
-    str:        ":";
     text-color: @normal-foreground;
     margin:     0 0.3em 0 0;
 }
+
 element-text, element-icon {
     background-color: inherit;
     text-color:       inherit;
